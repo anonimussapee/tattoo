@@ -1,5 +1,6 @@
 :root{
-
+--choco-simple:chocolate;
+--gray-light:rgb(197, 195, 195);
 }
 *{
     padding: 0;
@@ -14,51 +15,87 @@ header{
     width: 100%;
     height: auto;
 }
-.header_fixed{
+.header-nav.nav_fixed{
     position: fixed;
+    background-color: rgba(0, 0, 0, 0.601);
+    transition: ease-in .3s;
 }
-header nav{
-    background-color: black;
+.header-nav{
+    width: 100%;
+    height: auto;
     text-align: right;
     padding: 15px;
+    transition: ease-in .3s;
 }
-header nav a{
+header nav .menu_op{
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.7rem;
-    color: chocolate;
+    color: var(--choco-simple);
     text-shadow: white 1px 1px 1px;
     padding: 5px;
+    visibility: hidden;
 }
-header nav a:hover{
-    color:white;
+@media (min-width:768px) {
+    header nav .menu_op{
+        visibility: visible;
+    }
+    .menu--burger{
+        visibility: hidden;
+    }
+}
+.menu--burger{
+    background-image: url(../imgs/iconos/menu_burger.png);
+    width: 40px;
+    height:40px;
+    display: block;
+    position: absolute;
+    top: 6px;
+    right:5px;
 }
 .img{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-header a .logo_principal{
+.header-nav a .logo_principal{
 display: block;
 position: absolute;
 width: 50px;
 height: 50px;
-margin: 5px;
 background-image: url(../imgs/iconos/logo_principal.png);
+top: 1.5px;
 }
-.main--cover-container{
+.header-nav .name_page{
+    position: absolute;
+    left: 68px;
+    top: 3px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.7rem;
+    color: var(--choco-simple);
+    text-shadow: white 1px 1px 1px;
+    padding: 5px;
+    transition: ease-in .2s;
+}
+header nav a:hover, .header-nav .name_page:hover{
+    color:white;
+    transition: ease-in .2s;
+}
+.header--desc{
     width: 100%;
     height: auto;
 }
  .backgroundimg{
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     position: relative;
     background-image: url(../imgs/fondos/cover_principal.jpeg);
 }
-.main--cover-container .ask_cover{
-    padding-top: 30px;
+.header--desc .ask_cover{
+    padding-top: 40px;
     width: 50%;
     padding-left: 10px;
     height: auto;
@@ -66,11 +103,14 @@ background-image: url(../imgs/iconos/logo_principal.png);
     text-shadow: chocolate 1px 1px 1px;
 }
 .ask_cover p{
-    font-size: 2rem;
+    font-size: 1.9rem;
     font-weight: 600;
     font-family: 'Bungee Inline', cursive;
 }
-.main--cover-container a{
+.ask_cover.ask_cover_space p{
+    padding-top: 57px;
+}
+.header--desc a{
     font-size: 1.5rem;
     font-weight: 400;
     padding: 10px;
@@ -79,6 +119,79 @@ background-image: url(../imgs/iconos/logo_principal.png);
     color: white;
     border-radius: 10px;
     position: absolute;
-    top: 180px;
+    bottom: 20px;
     left: calc(10%);
+    transition: ease-in .2s;
+}
+.header--desc a:hover{
+    font-size: 1.6rem;
+    transition: ease-in .2s;
+}
+.chat_wpp {
+    font-size: .7rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    
+}
+.chat_wpp p{
+    border-radius:5px ;
+    background-color: rgba(2, 152, 52, 0.885);
+    border: groove 2px rgba(0, 0, 0, 0.296);
+    display: inline-block;
+    padding: 3px;
+    position: fixed;
+    bottom: 25px;
+    right: 10px;
+}
+.chat_wpp .wp_logo{
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+    transition: ease-in .2s;
+    background-image: url(../imgs/iconos/wpp_icon.png);
+}
+.chat_wpp .wp_logo:hover{
+    transition: ease-in .2s;
+    width: 52px;
+    height: 52px;
+}
+.main--introduce-container{
+width: 100%;
+height: auto;
+padding-top:20px ;
+padding-bottom: 20px;
+background-color: rgb(22, 22, 22);
+}
+.main--introduce-container .introduce--desc-container{
+width: 90%;
+min-width: 288px;
+max-width: 500px;
+height: auto;
+margin: 0 auto;
+text-align: center;
+}
+.introduce--desc-container h1{
+ font-size: 1.5rem;
+ font-weight: 100;
+ color: white;
+ padding-bottom: 20px;
+ font-family: 'Bungee Inline', cursive;
+}
+.introduce--desc-container p{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgb(174, 174, 174);
+}
+.introduce--desc-container div{
+    width: 80%;
+    margin: 0 auto;
+}
+@media (min-width:398px) {
+    .introduce--desc-container div{
+        width: 100%;
+    }
 }
