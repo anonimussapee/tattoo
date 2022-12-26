@@ -1,6 +1,7 @@
 :root{
 --choco-simple:chocolate;
 --gray-light:rgb(197, 195, 195);
+--gray-light-txt:rgb(174, 174, 174);
 }
 *{
     padding: 0;
@@ -163,7 +164,6 @@ header nav a:hover, .header-nav .name_page:hover{
 width: 100%;
 height: auto;
 padding-top:20px ;
-padding-bottom: 20px;
 background-color: rgb(22, 22, 22);
 }
 .main--introduce-container .introduce--desc-container{
@@ -184,7 +184,8 @@ text-align: center;
 .introduce--desc-container p{
     font-size: 1.1rem;
     font-weight: 500;
-    color: rgb(174, 174, 174);
+    padding-bottom: 20px;
+    color:var(--gray-light-txt);
 }
 .introduce--desc-container div{
     width: 80%;
@@ -194,4 +195,85 @@ text-align: center;
     .introduce--desc-container div{
         width: 100%;
     }
+}
+/*despues de la bienvenida*/
+.main--services-container{
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: black;
+    text-align: center;
+}
+.main--services-container .title_bold{
+    color: white;
+    font-size: 1.5rem;
+    font-weight:600;
+    line-height: 1.7rem;
+}
+.main--services-container hr{
+    margin: 20px;
+    border: 0.1px solid  rgba(120, 119, 119, 0.29);
+}
+.main--services-container .services-content-container{
+    width: 90%;
+    min-width: 288px;
+    max-width: 800px;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.services--card-content .backgroundimg1{
+    width: 90%;
+    height: 48vh;
+    margin: 0 auto;
+    border-radius: 150px;
+    border: 3px groove rgba(255, 255, 255, 0.576);
+    background-image: url(../imgs/fondos/tattoshoulder.jpg);
+}
+.services--card-content .backgroundimg2{
+    width: 90%;
+    height: 48vh;
+    margin: 0 auto;
+    border-radius: 150px;
+    border: 3px groove rgba(255, 255, 255, 0.576);
+    background-image: url(../imgs/fondos/tatuador2.jpeg);
+}
+.services--card-content .backgroundimg3{
+    width: 90%;
+    height: 48vh;
+    margin: 0 auto;
+    border-radius: 150px;
+    border: 3px groove rgba(255, 255, 255, 0.576);
+    background-image: url(../imgs/fondos/salon.jpg);
+}
+.services--card-content .title{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.7rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color:  white;
+}
+.services--card-content .content{
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.3rem;
+    padding-bottom: 10px;
+    color:  var(--gray-light-txt);
+}
+main a{
+    text-decoration: none;
+}
+.services--card-content .btn{
+    font-size: 1.4rem;
+    font-weight: 400;
+    width: 200px;
+    padding: 5px;
+    margin: 0 auto;
+    color: white;
+    background-color: var(--choco-simple);
+    border-radius: 10px;
 }
