@@ -97,16 +97,31 @@ header nav a:hover, .header-nav .name_page:hover{
 }
 .header--desc .ask_cover{
     padding-top: 40px;
-    width: 50%;
+   width: 50%;
     padding-left: 10px;
     height: auto;
     color: white;
     text-shadow: chocolate 1px 1px 1px;
-}
-.ask_cover p{
     font-size: 1.9rem;
     font-weight: 600;
     font-family: 'Bungee Inline', cursive;
+}
+@media (min-width:768px) {
+    .header--desc .ask_cover{
+        font-size: 3rem;
+         width: 60%;
+    } 
+}
+@media (min-width:900px) {
+    .header--desc .ask_cover{
+        font-size: 3rem;
+         width: 40%;
+         padding-top: 80px;
+         padding-left: 30px;
+    } 
+    .backgroundimg{
+        height: 70vh;
+    }
 }
 .ask_cover.ask_cover_space p{
     padding-top: 57px;
