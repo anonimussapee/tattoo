@@ -233,32 +233,38 @@ text-align: center;
 .main--services-container .services-content-container{
     width: 90%;
     min-width: 288px;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
+    justify-content: center;
+}
+.services-content-container .services--card-content{
+    width: 300px;
+    min-width: 288px;
+    max-width: 340px;
 }
 .services--card-content .backgroundimg1{
-    width: 90%;
-    height: 48vh;
+    width: 288px;
+    height: 288px;
     margin: 0 auto;
     border-radius: 150px;
     border: 3px groove rgba(255, 255, 255, 0.576);
     background-image: url(../imgs/fondos/tattoshoulder.jpg);
 }
 .services--card-content .backgroundimg2{
-    width: 90%;
-    height: 48vh;
+    width: 288px;
+    height: 288px;
     margin: 0 auto;
     border-radius: 150px;
     border: 3px groove rgba(255, 255, 255, 0.576);
     background-image: url(../imgs/fondos/tatuador2.jpeg);
 }
 .services--card-content .backgroundimg3{
-    width: 90%;
-    height: 48vh;
+    width: 288px;
+    height: 288px;
     margin: 0 auto;
     border-radius: 150px;
     border: 3px groove rgba(255, 255, 255, 0.576);
