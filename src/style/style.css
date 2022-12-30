@@ -47,13 +47,46 @@ header nav .menu_op{
     }
 }
 .menu--burger{
-    background-image: url(../imgs/iconos/menu_burger.png);
+    background-image: url(../imgs/iconos/menu_burger2.png);
     width: 40px;
     height:40px;
     display: block;
     position: absolute;
     top: 6px;
     right:5px;
+}
+.menu--burger-slider{
+    width: 250px;
+    height: 100%;
+    top: 0;
+    right: -250px;
+    position: fixed;
+    background-color: rgba(210, 105, 30, 0.846);
+    display: flex;
+    flex-direction: column;
+    gap:4px;
+    border-radius: 5px;
+    padding: 10px;
+    border: groove rgba(255, 255, 255, 0.492) 4px;
+    transition: ease-in .2s ;
+}
+.menu--burger-slider.open{
+    right: 0;
+    transition: ease-in .2s ;
+}
+.menu--burger-slider .menu_opp{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+    display: block;
+    padding: 5px;
+    background-color: rgb(130, 72, 31);
+}
+.menu--burger-slider .burger-close {
+    width: 45px;
+    height: 45px;
+    align-self:flex-end;
+    background-image:url(https://cdn-icons-png.flaticon.com/128/9283/9283081.png) ;
 }
 .img{
     background-position: center;
@@ -102,19 +135,19 @@ header nav a:hover, .header-nav .name_page:hover{
     height: auto;
     color: white;
     text-shadow: chocolate 1px 1px 1px;
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-weight: 600;
     font-family: 'Bungee Inline', cursive;
 }
 @media (min-width:425px) {
     .header--desc .ask_cover{
-        font-size: 3rem;
+        font-size: 2.6rem;
          width: 60%;
     } 
 }
 @media (min-width:768px) {
     .header--desc .ask_cover{
-        font-size: 3.3rem;
+        font-size: 3.2rem;
          width: 60%;
     } 
 }
@@ -154,7 +187,11 @@ header nav a:hover, .header-nav .name_page:hover{
     font-weight: bold;
     color: white;
     text-decoration: none;
+    transition: ease-in .2s;
     
+}
+.chat_wpp.hidden{
+    visibility: hidden;
 }
 .chat_wpp p{
     border-radius:5px ;
@@ -187,13 +224,14 @@ main{
 .main--introduce-container{
 width: 100%;
 height: auto;
-padding-top:20px ;
+padding-top:30px ;
+padding-bottom: 20px;
 background-color: rgb(22, 22, 22);
 }
 .main--introduce-container .introduce--desc-container{
 width: 90%;
 min-width: 288px;
-max-width: 500px;
+max-width: 800px;
 height: auto;
 margin: 0 auto;
 text-align: center;
@@ -302,7 +340,7 @@ text-align: center;
     padding-bottom: 10px;
     color:  var(--gray-light-txt);
 }
-main a{
+a{
     text-decoration: none;
 }
 .btn{
@@ -415,4 +453,76 @@ flex-direction: column;
         width: 255px;
        height: 255px;
     }
+}
+.main--contact-container{
+    width: 100%;
+    height: auto;
+    background-color: rgb(12, 12, 12);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.main--contact-container .contact-content-container{
+width: 90%;
+min-width: 288px;
+max-width: 800px;
+margin: 0 auto;
+}
+.contact-content-container .btn{
+width: 280px;
+margin-bottom: 20px;
+}
+.contact-content-container .btn .wpp_logo{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-image: url(../imgs/iconos/wpp_icon.png);
+    margin-right: 2px;
+}
+footer{
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    background-color: black;
+}
+footer .footer--social-container{
+    width: 90%;
+    min-width: 288px;
+    max-width: 800px;
+    height: auto;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 10px;
+}
+.footer--social-container span{
+    width: 25px;
+    height: 25px;
+    display: block;
+}
+.footer--social-container .facebook{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/4494/4494475.png);
+}
+.footer--social-container .twiter{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/4494/4494477.png);
+}
+.footer--social-container .instagram{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/4494/4494488.png);
+}
+.footer--social-container .youtube{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/4494/4494485.png);
+}
+footer .footer--info-container{
+    width: 90%;
+    min-width: 288px;
+    max-width: 800px;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
